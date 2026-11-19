@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MovieMVVM</string>
+    <string name="API_KEY_TMDB">f86b371ffc755ff00196215fd4c5c7c3</string>
 </resources>

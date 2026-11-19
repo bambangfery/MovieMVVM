@@ -30,6 +30,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    buildFeatures {
+        dataBinding = true
+    }
 }
 
 dependencies {
@@ -38,7 +41,23 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
     implementation(libs.material)
+    implementation(libs.androidx.swiperefreshlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+
+    //Retrofit and GSON
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
+    //Kotlin Coroutines
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.jetbrains.kotlinx.coroutines.core)
+
+    //Kodein Dependency Injection
+    implementation(libs.kodein.di.generic.jvm)
+    implementation(libs.kodein.di.framework.android.x)
+
+    implementation(libs.picasso)
+    implementation(libs.core)
 }
