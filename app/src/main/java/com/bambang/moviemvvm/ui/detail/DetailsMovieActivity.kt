@@ -168,7 +168,7 @@ class DetailsMovieActivity : AppCompatActivity(), KodeinAware {
 
                 if (trailer != null && !trailer.key.isNullOrEmpty()){
                     binding.youtubePlayerView.visibility = View.VISIBLE
-                    val options = IFramePlayerOptions.Builder().controls(1).build()
+                    val options = IFramePlayerOptions.Builder(baseContext).controls(1).build()
                     binding.youtubePlayerView.initialize(
                         youTubePlayerListener = object : AbstractYouTubePlayerListener() {
                             override fun onReady(youTubePlayer: YouTubePlayer) {
